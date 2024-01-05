@@ -6,7 +6,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=RU/Msk+0:00
+      - TZ=Europe/Moscow
       - AUTO_UPDATE=true #optional
       - RUN_OPTS= #optional
     volumes:
