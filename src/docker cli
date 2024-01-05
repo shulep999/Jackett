@@ -3,8 +3,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/Moscow \
-  -e AUTO_UPDATE=true `#optional` \
-  -e RUN_OPTS= `#optional` \
+  -e AUTO_UPDATE=true \
   -p 9117:9117 \
   -v /path/to/data:/config \
   -v /path/to/blackhole:/downloads \
