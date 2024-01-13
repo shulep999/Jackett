@@ -7,8 +7,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Moscow
-      - AUTO_UPDATE=true #optional
-      - RUN_OPTS= #optional
+      - AUTO_UPDATE=true 
     volumes:
       - /usr/src:/config
       - /usr/src:/downloads
