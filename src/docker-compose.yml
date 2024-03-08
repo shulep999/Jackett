@@ -4,8 +4,6 @@ services:
     image: lscr.io/linuxserver/jackett:latest
     container_name: jackett
     environment:
-      - PUID=1000
-      - PGID=1000
       - TZ=Europe/Moscow
       - AUTO_UPDATE=true 
     volumes:
