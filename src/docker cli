@@ -4,7 +4,7 @@ docker run -d \
   -e PGID=1000 \
   -e TZ=Europe/Moscow \
   -e AUTO_UPDATE=true \
-  -p 9117:9117 \
+  -p 9116:9116 \
   -v /path/to/data:/config \
   -v /path/to/blackhole:/downloads \
   --restart unless-stopped \
