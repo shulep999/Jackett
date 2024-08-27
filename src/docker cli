@@ -1,7 +1,7 @@
 docker run -d \
   --name=jackett \
-  -e PUID=1000 \
-  -e PGID=1000 \
+  -e PUID=0 \
+  -e PGID=0 \
   -e TZ=Europe/Moscow \
   -e AUTO_UPDATE=true \
   -p 9116:9116 \
