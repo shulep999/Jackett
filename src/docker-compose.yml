@@ -8,8 +8,8 @@ services:
       - TZ=Europe/Moscow
       - AUTO_UPDATE=true 
     volumes:
-      - /usr/src:/config
-      - /usr/src:/downloads
+      - /path/to/jackett/data:/config
+      - /path/to/blackhole:/downloads
     ports:
        - 9117:9117
     restart: unless-stopped
