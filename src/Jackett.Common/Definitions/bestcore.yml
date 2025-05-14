@@ -1,7 +1,7 @@
 ---
 id: bestcore
 name: Best-Core
-description: "Best-Core is a HUNGARIAN Private Tracker for MOVIES / TV"
+description: "Best-Core is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL"
 language: hu-HU
 type: private
 encoding: ISO-8859-2
@@ -106,6 +106,8 @@ login:
   inputs:
     username: "{{ .Config.username }}"
     password: "{{ .Config.password }}"
+  error:
+    - selector: :root:contains("Sikertelen bejelentkezés")
   test:
     path: index.php
     selector: a[href^="logout.php?c="]

@@ -1,12 +1,13 @@
 ---
 id: superbits
 name: Superbits
-description: "Superbits is a SWEDISH Private Torrent Tracker for MOVIES / TV / GENERAL"
+description: "SuperBits (SBS) is a SWEDISH Private Torrent Tracker for MOVIES / TV / GENERAL"
 language: sv-SE
 type: private
 encoding: UTF-8
 links:
   - https://superbits.org/
+  - https://superbits.cc/
 
 caps:
   categorymappings:
@@ -23,7 +24,7 @@ caps:
     - {id: 10, cat: Audio/Video, desc: Musikvideos}
     - {id: 11, cat: Books/Mags, desc: E-tidningar}
     - {id: 12, cat: Audio, desc: MP3}
-    - {id: 13, cat: Other, desc: Omslag}
+    - {id: 13, cat: Audio, desc: Pod}
     - {id: 14, cat: Other, desc: Övrigt}
     - {id: 15, cat: PC/Games, desc: PC-Spel}
     - {id: 16, cat: PC/0day, desc: Program}
@@ -151,7 +152,7 @@ search:
       selector: added
       filters:
         - name: append
-          args: " +02:00" # CEST
+          args: " +01:00" # CET
         - name: dateparse
           args: "yyyy-MM-dd HH:mm:ss zzz"
     size:

@@ -23,7 +23,7 @@ namespace Jackett.Common.Indexers.Definitions
     {
         public override string Id => "hdtorrents";
         public override string Name => "HD-Torrents";
-        public override string Description => "HD-Torrents is a private torrent website with HD torrents and strict rules on their content.";
+        public override string Description => "HD-Torrents (HDT) is a Private Torrent Tracker for HD MOVIES / TV / MUSIC / 3X";
         public override string SiteLink { get; protected set; } = "https://hdts.ru/"; // Domain https://hdts.ru/ seems more reliable
         public override string[] AlternativeSiteLinks => new[]
         {
@@ -62,6 +62,8 @@ namespace Jackett.Common.Indexers.Definitions
                    configData: new ConfigurationDataBasicLogin("For best results, change the <b>Torrents per page:</b> setting to <b>100</b> on your account profile."))
         {
             configData.AddDynamic("freeleech", new BoolConfigurationItem("Search freeleech only") { Value = false });
+            configData.AddDynamic("flaresolverr", new DisplayInfoConfigurationItem("FlareSolverr", "This site may use Cloudflare DDoS Protection, therefore Jackett requires <a href=\"https://github.com/Jackett/Jackett#configuring-flaresolverr\" target=\"_blank\">FlareSolverr</a> to access it."));
+            configData.AddDynamic("accountinactivity", new DisplayInfoConfigurationItem("Account Inactivity", "If you do not log in for 50 days, your account will be disabled for inactivity. If you are VIP you won't be disabled until the VIP period is over."));
         }
 
         private TorznabCapabilities SetCapabilities()
@@ -111,6 +113,7 @@ namespace Jackett.Common.Indexers.Definitions
 
             // XXX
             caps.Categories.AddCategoryMapping("58", TorznabCatType.XXX, "XXX/Blu-ray");
+            caps.Categories.AddCategoryMapping("78", TorznabCatType.XXX, "XXX/Remux");
             caps.Categories.AddCategoryMapping("74", TorznabCatType.XXX, "XXX/UHD/Blu-ray");
             caps.Categories.AddCategoryMapping("48", TorznabCatType.XXX, "XXX/1080p/i");
             caps.Categories.AddCategoryMapping("47", TorznabCatType.XXX, "XXX/720p");

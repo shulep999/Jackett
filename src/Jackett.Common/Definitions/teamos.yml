@@ -87,7 +87,6 @@ caps:
     - {id: 78, cat: PC/0day, desc: "Security Tools"}
     - {id: 70, cat: PC/0day, desc: "Utility Tools"}
     - {id: 74, cat: PC/0day, desc: "Web Tools"}
-    - {id: 80, cat: PC/0day, desc: "Windows Phone Apps"}
     - {id: 81, cat: PC/0day, desc: "Developers"}
     - {id: 82, cat: PC/0day, desc: "Designers"}
     - {id: 84, cat: PC, desc: "TEAM OS Other Stuff Releases"}
@@ -97,7 +96,9 @@ caps:
     - {id: 86, cat: Books/EBook, desc: "Ebooks"}
     - {id: 87, cat: Other, desc: "Wallpapers, Themes & Screensavers"}
     - {id: 89, cat: PC, desc: "Other Releases"}
+    - {id: 102, cat: Other, desc: "Post And Share"}
     - {id: 100, cat: Other, desc: "Tutorials"} # undocumented
+    - {id: 103, cat: Other, desc: "Other Topic"} # undocumented
 
   modes:
     search: [q]
@@ -119,6 +120,10 @@ settings:
     type: checkbox
     label: Search freeleech only
     default: false
+  - name: info_results
+    type: info
+    label: Search results
+    default: "If you are getting the error <b>Found no results while trying to browse this tracker</b> then first access the site with your browser and read any mandatory notices that the site presents. You cannot browse torrents with unread notices outstanding."
 
 login:
   method: cookie

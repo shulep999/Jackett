@@ -114,7 +114,7 @@ search:
     User-Agent: ["{{ .Config.useragent }}"]
 
   rows:
-    selector: table#TorrentTable > tbody > tr
+    selector: table#torrenttable > tbody > tr
 
   fields:
     category:
@@ -145,7 +145,7 @@ search:
         - name: dateparse
           args: "yyyy-MM-dd HH:mm:ss zzz"
     size:
-      selector: td.fixed-width-size > span
+      selector: td.fixed-width-size > a
     grabs:
       selector: td.fixed-width-completed
     seeders:

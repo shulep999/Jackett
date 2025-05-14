@@ -27,7 +27,7 @@ namespace Jackett.Common.Indexers.Definitions
     {
         public override string Id => "filelist";
         public override string Name => "FileList";
-        public override string Description => "The best Romanian site.";
+        public override string Description => "FileList is a Private Torrent Tracker. The best Romanian site.";
         public override string SiteLink { get; protected set; } = "https://filelist.io/";
         public override string[] AlternativeSiteLinks => new[]
         {
@@ -187,7 +187,7 @@ namespace Jackett.Common.Indexers.Definitions
                         Seeders = row.Seeders,
                         Peers = row.Seeders + row.Leechers,
                         Imdb = imdbId,
-                        PublishDate = DateTime.Parse(row.UploadDate + " +0300", CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal),
+                        PublishDate = DateTime.Parse(row.UploadDate + " +0200", CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal),
                         DownloadVolumeFactor = isFreeleech ? 0 : 1,
                         UploadVolumeFactor = row.DoubleUp ? 2 : 1,
                         MinimumRatio = 1,
